@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New-York</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="new-york.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/icon.jpg">
+					<!-- JS -->
+	<link rel="stylesheet" type="text/css" href="fancybox-3.0/dist/jquery.fancybox.min.css"> <!-- fancybox css -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> <!-- онлайн библиотека JQUERY -->
+	<script src="fancybox-3.0/dist/jquery.fancybox.min.js"></script> <!-- fancybox js -->
+</head>
+<body>
+	<div class="first">
+		<div class="fs">
+			<video poster="images/fons.jpg" id="bgvid" playsinline autoplay muted loop>
+  			<!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+			<source src="https://youtu.be/51qp4J1QxWI" type="video/webm">
+			<source src="images/ny.mp4" type="video/mp4">
+			</video>
+			<script type="text/javascript">
+			var vid = document.getElementById("bgvid");
+			var pauseButton = document.querySelector("#polina button");
+			
+			if (window.matchMedia('(prefers-reduced-motion)').matches) {
+			    vid.removeAttribute("autoplay");
+			    vid.pause();
+			    pauseButton.innerHTML = "Paused";
+			}
+			
+			function vidFade() {
+			  vid.classList.add("stopfade");
+			}
+			
+			vid.addEventListener('ended', function()
+			{
+			// only functional if "loop" is removed 
+			vid.pause();
+			// to capture IE10
+			vidFade();
+			}); 
+
+
+			pauseButton.addEventListener("click", function() {
+			  vid.classList.toggle("stopfade");
+			  if (vid.paused) {
+			    vid.play();
+			    pauseButton.innerHTML = "Pause";
+			  } else {
+			    vid.pause();
+			    pauseButton.innerHTML = "Paused";
+			  }
+			})
+
+
+			</script>
+			<h1>New-York City</h1>
+			<p>Welcom to page of New-York city.</p>
+			<a href="#second">Get started</a>
+		</div>
+	</div>
+	<div class="second" id="second">
+		<h2>About city</h2>
+		<p>The City of New York, often called New York City or simply New York, is the most populous city in the United States.With an estimated 2015 population of 8,550,405 distributed over a land area of about 302.6 square miles (784 km2), New York City is also the most densely populated major city in the United States. Located at the southern tip of the state of New York, the city is the center of the New York metropolitan area, one of the most populous urban agglomerations in the world. A global power city, New York City exerts a significant impact upon commerce, finance, media, art, fashion, research, technology, education, and entertainment, its fast pace defining the term New York minute. Home to the headquarters of the United Nations, New York is an important center for international diplomacy and has been described as the cultural and financial capital of the world.</p>
+		<h3>Soul New-York</h3>
+	</div>
+	<div class="third">	
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22289.76826820556!2d-73.96416427254535!3d40.783322250882854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2589a018531e3%3A0xb9df1f7387a94119!2z0KbQtdC90YLRgNCw0LvRjNC90YvQuSDQv9Cw0YDQug!5e1!3m2!1sru!2sru!4v1492982708638" width="1600" height="600" frameborder="0" style="border:0" allowfullscreen alt="map of the New-York cantral park"></iframe>
+	</div>
+	<div class="fourth">
+		<h2>Gallery</h2>
+		<a href="images/1.jpg"><img src="images/1.jpg" alt="" title=""></a>
+		<a href="images/2.jpg"><img src="images/2.jpg" alt="" title=""></a>
+		<a href="images/3.jpg"><img src="images/3.jpg" alt="" title=""></a>
+		<a href="images/4.jpg"><img src="images/4.jpg" alt="" title=""></a>
+		<a href="images/5.jpg"><img src="images/5.jpg" alt="" title=""></a>
+		<a href="images/6.jpg"><img src="images/6.jpg" alt="" title=""></a>
+		<a href="images/7.jpg"><img src="images/7.jpg" alt="" title=""></a>
+		<a href="images/8.jpg"><img src="images/8.jpg" alt="" title=""></a>
+		<a href="images/1.jpg"><img src="images/1.jpg" alt="" title=""></a>
+		<a href="images/2.jpg"><img src="images/2.jpg" alt="" title=""></a>
+		<a href="images/3.jpg"><img src="images/3.jpg" alt="" title=""></a>
+		<a href="images/4.jpg"><img src="images/4.jpg" alt="" title=""></a>
+		<a href="images/5.jpg"><img src="images/5.jpg" alt="" title=""></a>
+		<a href="images/6.jpg"><img src="images/6.jpg" alt="" title=""></a>
+		<a href="images/7.jpg"><img src="images/7.jpg" alt="" title=""></a>
+		<a href="images/8.jpg"><img src="images/8.jpg" alt="" title=""></a>		
+	</div>
+	<div class="fifth">
+		<script> /*отключает звук у видео id="playeryt"*/
+  			var tag = document.createElement('script');
+  			tag.src = "https://www.youtube.com/iframe_api";
+  			var firstScriptTag = document.getElementsByTagName('script')[0];
+  			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  			  var player;
+  			  function onYouTubeIframeAPIReady() {
+  			      player = new YT.Player('playeryt', {
+  			          events: {
+  			              'onReady': onPlayerReady
+  			          }
+  			      });
+  			  }
+			
+			  		  function onPlayerReady() {
+			  		      player.playVideo();
+			  		      player.mute();
+  			  }
+    	
+		</script>
+		<iframe id="playeryt" width="1600" height="600" src="https://www.youtube.com/embed/FjU_x1106pg?rel=0&amp;loop=1&amp;autoplay=1&amp;enablejsapi=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		<!-- видео -->
+	</div>
+	<div class="sixth">
+		<h4>Recommended places new york</h4><br>
+		<div class="sixths"><ul>
+			<li>Statue of Liberty and Battery Park<br><img src="images/ul1.jpg"><br>The Statue of Liberty was France's gift to America. It was built in 1886 and remains a famous world symbol of freedom and one of the greatest American icons. It is the world's largest statue and stands just less than 152 feet tall from the base to the torch, and weighs approximately 450,000 pounds. The statue offers a fine view of the New York Harbor and lower Manhattan. </li>
+			<li>Empire State Building<br><img src="images/ul2.jpg"><br>Along with the Statue of Liberty, The Empire State Building is New York's most famous landmark. The 381 m tall, 102-storey building was the tallest in the world until the 1 World Trade Center tower rose higher 41 years later. Topped with a mooring mast for airships, the Empire State Building immediately became a landmark and a symbol for NYC when it opened in 1931. There are actually two observatories atop the Empire State Building.</li>	
+			<li>Central Park<br><img src="images/ul3.jpg"><br>Central Park is the playground of New Yorker's. This huge park in the city center is one of the things that makes New York such a beautiful city and not simply a concrete jungle. The park has many attractions within its borders and has been featured in countless TV shows and movies. Some of the places of note within this green space that visitors will probably be familiar with are Strawberry Fields.</li>
+		</ul>
+		<ul>
+			<li>Broadway and Shubert Alley<br><img src="images/ul4.jpg"><br>Taking in a Broadway show is one of the highlights of a visit to New York City. Considered the pinnacle of American theater, it has long been world renowned for its performances. This is the place to come to see the latest shows and the long running classics. Broadway usually refers simply to Broadway theater which encompasses a large number of theater venues in the theatre district and along the street of Broadway.<br>Official site:<a href="http://www.broadway.com/">http://www.broadway.com/</a></li>
+			<li>Metropolitan Museum of Art<br><img src="images/ul5.jpg"><br>The Metropolitan Museum of Art, or "The Met" as it is commonly known, was founded in 1870.The permanent collection at the Met contains over 2 million works of art. Highlights of the collection include American decorative arts, arms and armor, costumes, Egyptian art, musical instruments, and photographs, along with much more.<br>Official site:<a href="http://www.metmuseum.org/">http://www.metmuseum.org/</a></li>
+			<li>Rockefeller Center<br><img src="images/ul6.jpg"><br>Rockefeller Center is a vast entertainment and shopping complex in the middle of Manhattan, and home to NBC-TV and radio and other media. There is an outdoor skating rink which is incredibly popular in winter. At Christmas a huge tree stands out front. Inside are shops, restaurants, and an observation deck. In front of the International Building is a famous sculpture of Atlas.</li>
+		</ul>
+		<ul>
+			<li>Fifth Avenue<br><img src="images/ul7.jpg"><br>Fifth Avenue has long had a reputation as New York's premier shopping area. Many top end designers have their flagship stores located along this famous avenue. Cartier, Tiffany, Bergdorf-Goodman, the famous Apple Store Fifth Avenue, and of course Saks Fifth Avenue, as well as many others line the posh avenue. Even none shoppers can enjoy a walk along Fifth Avenue.</li>
+			<li>Brooklyn Bridge<br><img src="images/ul8.jpg"><br>The Brooklyn Bridge, completed in 1883, was the world's first bridge to be constructed of steel. It spans the East River from Manhattan. The bridge is an American landmark that has inspired generations of poets, songwriters and painters. Engineer John Roebling conceived of the bridge in 1855 and worked out every detail from its two granite towers to its four suspended steel cables.</li>
+			<li>Times Square<br><img src="images/ul9.jpg"><br>Formerly Longacre Square, Times Square was named in 1904 after the New York Times tower. The newspaper first posted current headlines along its famous moving sign, the world's first, in 1928. Long the heart of the Theater District, Times Square fell into decay during the Depression when many theaters shut down. The city cleaned up the area by inviting corporations such as Disney to move into the area. Address: Broadway and 7th Avenue Official site:<a href="http://www.timessquarenyc.org/index.aspx">http://www.timessquarenyc.org/index.aspx</a></li>			
+		</ul>
+		</div>
+	</div>
+	<footer>All rights reserved &copy;</footer>
+</body>
+</html>

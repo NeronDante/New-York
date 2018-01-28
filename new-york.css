@@ -1,0 +1,164 @@
+body {
+	background: #212121 url(images/print.jpg);
+	color: #fff;
+	padding: 0;
+  	margin: 0;
+}
+.first,.second,.third,.fourth,.fifth, footer {
+	height: 600px;
+	font-family: arial, helvetica;	
+	margin: 0; /*позиционирование 0*/
+  	position: relative;
+  	text-align: center; /*1*/
+}
+
+video { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+}
+.first {
+	/*background: url(images/fons.jpg) no-repeat;	*/
+	line-height: 76px;
+	height: 1080px;		
+}
+.first h1{
+	 font-size: 100px;	
+}
+
+.fs {
+	position: relative;
+	top: 20%;
+}
+.fs p{
+	color: #fff;
+    background-color: #AA8EB5;
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+.fs a{
+	color: #fff;
+    background: #000;
+    padding: 10px 40px;
+    text-decoration: none;
+    transition: background .5s;
+}
+.second {
+	
+	height: 100%;
+	/*display: flex;
+	flex-direction: center;	
+	justify-content: center;*/
+}	
+
+.second p{	
+	position: relative;
+	text-align: center;
+	top: 20%;
+	border: solid white 5px;
+	border-spacing: 0px;
+	margin: 0px;
+	padding: 20px 20px 20px 20px;
+}
+.second h2{
+	font-size: 30px;
+}
+.second h3{
+	position: relative;
+	font-size: 30px;
+	top: 99%;
+	margin: 5% 5% 5% 5%;
+}
+
+.third {
+	background: url(images/park.jpg);
+}
+
+.fourth {
+	background: url(images/print.jpg);
+	height: 1080px;
+}
+.fourth h2{
+		font-size: 30px;
+}
+
+ .fourth img {
+ 	height: 200px;
+ 	width: 400px;
+ 	-webkit-transform:scale(0.8); /*Webkit: уменьшаем размер до 0.8*/
+-moz-transform:scale(0.8); /*Mozilla: масштабирование*/
+-o-transform:scale(0.8); /*Opera: масштабирование*/
+-webkit-transition-duration: 0.5s; /*Webkit: длительность анимации*/
+-moz-transition-duration: 0.5s; /*Mozilla: длительность анимации*/
+-o-transition-duration: 0.5s; /*Opera: длительность анимации*/
+opacity: 0.7; /*Начальная прозрачность изображений*/
+margin: 0 10px 5px 0; /*Интервалы между изображениями*/
+}
+
+.fourth img:hover{
+-webkit-transform:scale(1.2); /*Webkit: увеличиваем размер до 1.2x*/
+-moz-transform:scale(1.2); /*Mozilla: масштабирование*/
+-o-transform:scale(1.2); /*Opera: масштабирование*/
+box-shadow:0px 0px 30px gray; /*CSS3 тени: 30px размытая тень вокруг всего изображения*/
+-webkit-box-shadow:0px 0px 30px gray; /*Webkit: тени*/
+-moz-box-shadow:0px 0px 30px gray; /*Mozilla: тени*/
+opacity: 1;
+ }
+
+.fifth {
+	position: relative;
+	top: 20%;
+	background: #000;
+}
+
+.sixth{
+	font-family: arial, helvetica;	
+	margin: 0; /*позиционирования 0*/
+  	position: relative;
+  	text-align: center; /*1*/
+}
+.sixth h4{
+	position: relative;
+	top: 10%;	
+}
+.sixths {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	/*padding: 20px 0% 20px 43%;*/
+
+
+	/*height: 100px;
+	background: url(картинки/mono.png);
+	clear: both;*/
+}
+ ul {
+ 	list-style: none;
+ 	
+ }
+
+.sixths img{
+	height: 150px;
+	width: 300px;
+}
+
+footer {
+	margin: 0;
+	padding: 2% 0% 0% 0%;
+	top: 20%;
+	background: #fff;
+	opacity: 0.5;
+	height: 100px;
+	color: #263238;
+}
